@@ -5,18 +5,18 @@ import sbt._
 
 import scala.language.postfixOps
 
-val apiVersion = "1.0.2"
-val scalaJsIOVersion = "0.3.0.4"
+val apiVersion = "1.6.3"
+val scalaJsIOVersion = "0.3.0.6"
 val scalaJsVersion = "2.12.1"
 
-homepage := Some(url("https://github.com/scalajs-io/bcrypt"))
+homepage := Some(url("https://github.com/scalajs-io/angular-animate"))
 
 lazy val root = (project in file(".")).
   enablePlugins(ScalaJSPlugin).
   settings(
-    name := "bcrypt",
+    name := "angular-animate",
     organization := "io.scalajs.npm",
-    description := "A bcrypt library for NodeJS",
+    description := "A angular-animate library for NodeJS",
     version := apiVersion,
     scalaVersion := scalaJsVersion,
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-language:implicitConversions", "-Xlint"),
@@ -24,10 +24,10 @@ lazy val root = (project in file(".")).
     autoCompilerPlugins := true,
     scalaJSModuleKind := ModuleKind.CommonJSModule,
     libraryDependencies ++= Seq(
-	    "org.scala-lang" % "scala-reflect" % scalaJsVersion,
-	    "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
-	    "io.scalajs" %%% "nodejs" % scalaJsIOVersion
-  ))
+      "org.scala-lang" % "scala-reflect" % scalaJsVersion,
+      "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
+      "io.scalajs.npm" %%% "angular" % "1.6.3"
+    ))
 
 /////////////////////////////////////////////////////////////////////////////////
 //      Publishing
@@ -52,9 +52,9 @@ lazy val publishingSettings = Seq(
         </license>
       </licenses>
       <scm>
-        <connection>scm:git:github.com/scalajs-io/bcrypt.git</connection>
-        <developerConnection>scm:git:git@github.com:scalajs-io/bcrypt.git</developerConnection>
-        <url>github.com/scalajs-io/bcrypt.git</url>
+        <connection>scm:git:github.com/scalajs-io/angular-animate.git</connection>
+        <developerConnection>scm:git:git@github.com:scalajs-io/angular-animate.git</developerConnection>
+        <url>github.com/scalajs-io/angular-animate.git</url>
       </scm>
       <developers>
         <developer>
